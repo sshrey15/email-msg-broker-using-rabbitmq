@@ -20,7 +20,7 @@ async function sendMail() {
     
 
     //Create an exchange 
-    await channel.assertExchange(exchange, "direct", { durable: true });
+    await channel.assertExchange(exchange, "topic", { durable: true });
 
     // Define queues for sub_user and normal_user
     const sub_queue = "sub_user_mail_queue";
